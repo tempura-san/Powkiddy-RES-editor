@@ -37,11 +37,12 @@ const QStringList ResFile::getFileList() {
     return names;
 }
 
+static const QImage simg;
 const QImage& ResFile::getImage(const int index) {
     if (index < m_images.size())
         return m_images[index].getImage();
     else
-        return QImage();
+        return simg;
 }
 
 
